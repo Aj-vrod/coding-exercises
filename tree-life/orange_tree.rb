@@ -1,5 +1,5 @@
 class OrangeTree
-  # TODO: Implement all the specs defined in the README.md :)
+  # TODO: Simulate the life cycle of a tree from its birth till its death according to the spects given
   attr_accessor :age, :height, :fruits
 
   def initialize
