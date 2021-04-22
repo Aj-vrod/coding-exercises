@@ -23,3 +23,5 @@ until is_dead
   sleep(0.1)
   puts ""
 end
+
+# Run this file to start the life of a tree

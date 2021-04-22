@@ -2,6 +2,7 @@ class OrangeTree
   # TODO: Simulate the life cycle of a tree from its birth till its death according to the spects given
   attr_accessor :age, :height, :fruits
 
+  # A tree must have age, height and fruits as its features to measure
   def initialize
     @age = 0
     @height = 0
