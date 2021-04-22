@@ -19,11 +19,15 @@ class VendingMachine
   end
 
   def buy_snack
-    # TODO: what happens to @snack_count, @user_balance_cents and @snack_price_cents
-    # when the user pushes a button to buy a Snack?
+    # This function must start the machine operations
+    # If the current balance is higher of equal the snack price
     if @user_balance_cents >= snack_price_cents
+      # and if there are snacks avalaible in the machine
       if @snack_count.positive?
+        # The user can buy a snack
+        # The snack price is discounted from the balance
         @user_balance_cents -= snack_price_cents
+        # We remove one snack from the machine
         @snack_count -= 1
       else
         "Error."
