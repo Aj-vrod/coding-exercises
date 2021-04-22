@@ -1,8 +1,11 @@
 class VendingMachine
-  # TODO: add relevant getter/setter to this class to make the scenarios work properly.
+  # TODO: simulate a vending machine operations for buying a snack following the specs given
   attr_accessor :user_balance_cents, :snack_count
   attr_reader :snack_price_cents
 
+  # A vending machine must be initialized with:
+  # a price for the snack
+  # the amount of snacks available at the vending machine
   def initialize(snack_price_cents, snack_count)
     @user_balance_cents = 0
     @snack_count = snack_count
@@ -10,7 +13,7 @@ class VendingMachine
   end
 
   def insert_coin(input_cents)
-    # TODO: what happens to @snack_count, @user_balance_cents and @snack_price_cents
+
     # when the user inserts a coin?
     return @user_balance_cents += input_cents
   end
