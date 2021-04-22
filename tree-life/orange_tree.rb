@@ -3,6 +3,7 @@ class OrangeTree
   attr_accessor :age, :height, :fruits
 
   # A tree must have age, height and fruits as its features to measure
+  # No need for arguments when instantiating a new tree
   def initialize
     @age = 0
     @height = 0
