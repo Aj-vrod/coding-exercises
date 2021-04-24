@@ -1,3 +1,6 @@
+// Simulate a battle between Hobbits, Elves, Dwarves and Eagles
+
+// This function checks if the soldier is good or evil
 const isGood = (soldierType) => {
   // TODO: return `true` if the soldierType is Good.
   // Hint: Hobbits, Elves, Dwarves and Eagles are Good
@@ -5,20 +8,19 @@ const isGood = (soldierType) => {
   return goodSoldiers.includes(soldierType);
 };
 
+// This function return an object of forces given a battlefield (String)
+// The keys should be the soldier type and the value the number of soldiers of this type
 const buildSoldierObject = (battlefield) => {
-  // TODO: Given a battlefield (String), return an object of forces.
   const soldiers = {};
   const separatedElements = battlefield.split(',');
   separatedElements.forEach((pair) => {
     const eachPair = pair.split(':');
-    console.log(eachPair);
     soldiers[eachPair[0]] = Number.parseInt(eachPair[1], 10);
   });
   return soldiers;
 };
-
+  // This function returns "Good", "Evil" or "Tie" with the outcome of the battle, based on the battlefield's description (it's a String),
 const whoWinsTheWar = (battlefield) => {
-  // TODO: Based on the battlefield's description (it's a String), return "Good", "Evil" or "Tie".
   const outcome = buildSoldierObject(battlefield);
   const typeOfSolfiers = Object.keys(outcome);
   let sumGoodForces = 0;
