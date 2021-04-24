@@ -1,7 +1,9 @@
+// Function to simulate a trip among friends and calculate the exact amount of debt for each person, given the amount they already paid
 const splitTheBill = (group) => {
-  // TODO: implement the function and return an Object
+  // Check if there is an object to calculate
   if (Object.keys(group).length > 0) {
     let totalSpent = 0;
+    // First we sum what everyone has paid
     Object.keys(group).forEach((key) => {
       const value = group[key];
       totalSpent += value;
@@ -20,4 +22,4 @@ const splitTheBill = (group) => {
   return group;
 };
 
-module.exports = splitTheBill; // Do not remove this line.
+module.exports = splitTheBill; // To export
