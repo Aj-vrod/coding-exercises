@@ -1,5 +1,7 @@
+// Write function to calculate the score of a bowling game accoring to the rules.
+// The input is a list of pins knocked down per roll for one player.
+// The function should return the player score.
 const bowlingScore = (rolls) => {
-  // TODO: computer score from rolls
   // rolls is an array
   // if rolls not empty
   let rollsCounter = 1;
@@ -61,5 +63,8 @@ const bowlingScore = (rolls) => {
   }
   return finalScore;
 };
+
+// Must return 179
+console.log(bowlingScore([1,4,2,8,6,4,7,3,10,10,10,9,1,4,5,6,4,9]))
 
 module.exports = bowlingScore; // To export function
