@@ -8,12 +8,15 @@ const splitTheBill = (group) => {
       const value = group[key];
       totalSpent += value;
     });
+    // Then we divide the total amount by the number of friends
     const amountForEach = totalSpent / Object.keys(group).length;
     const valuesArray = [];
+    // Then we substract the amount each participant paid by the total amount
     Object.values(group).forEach((value) => {
       valuesArray.push(value - amountForEach);
     });
     let counter = 0;
+    // Finally we insert those values into the final object
     Object.keys(group).forEach((key) => {
       group[key] = valuesArray[counter];
       counter += 1;
