@@ -3,14 +3,16 @@
 // The function should return the player score.
 const bowlingScore = (rolls) => {
   // rolls is an array
-  // if rolls not empty
+  // set variables to keep track of rolls and score
   let rollsCounter = 1;
   let finalScore = 0;
+  // if rolls not empty
   if (rolls.length > 0) {
-    // iterate over array
+    // iterate over the rolls array
     rolls.forEach((roll, index) => {
       // 9 first rows: general rules
       if (roll === 'Skip') {
+        console.log('skipped')
       } else if (rollsCounter < 10) {
         // if first score is not 10, sum the following one
         if (roll < 10) {
@@ -57,10 +59,10 @@ const bowlingScore = (rolls) => {
             rolls[index + 1] = 'Skip';
           }
         }
-        // get total score
       }
     });
   }
+  // get total score
   return finalScore;
 };
 
