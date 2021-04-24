@@ -21,11 +21,16 @@ const buildSoldierObject = (battlefield) => {
 };
   // This function returns "Good", "Evil" or "Tie" with the outcome of the battle, based on the battlefield's description (it's a String),
 const whoWinsTheWar = (battlefield) => {
+  // We need the number of soldiers for each type
   const outcome = buildSoldierObject(battlefield);
+  // First we get an array with the type of soldiers participating in the battle
   const typeOfSolfiers = Object.keys(outcome);
+  // Variables to measure at the end of the battle
   let sumGoodForces = 0;
   let sumEvilForces = 0;
+  // Iterating over the participants
   typeOfSolfiers.forEach((soldier) => {
+    // We check if each soldier is good or evil
     if (isGood(soldier)) {
       sumGoodForces += outcome[soldier];
     } else {
@@ -33,6 +38,7 @@ const whoWinsTheWar = (battlefield) => {
     }
   });
   let result = '';
+  // We check the result
   if ((battlefield === '') || (sumEvilForces === sumGoodForces)) {
     result = 'Tie';
   } else if (sumGoodForces > sumEvilForces) {
@@ -43,4 +49,4 @@ const whoWinsTheWar = (battlefield) => {
   return result;
 };
 
-module.exports = { whoWinsTheWar, buildSoldierObject, isGood }; // Do not remove this line
+module.exports = { whoWinsTheWar, buildSoldierObject, isGood }; // To export
