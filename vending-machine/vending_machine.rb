@@ -13,7 +13,7 @@ class VendingMachine
   end
 
   def insert_coin(input_cents)
-    # when the user inserts a coin must indicate the amount
+    # When the user inserts a coin, it must indicate the amount
     # This function must add the amount inserted to the current balance on the machine must
     @user_balance_cents += input_cents
   end
