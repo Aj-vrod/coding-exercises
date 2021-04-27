@@ -45,18 +45,18 @@ class OrangeTree
   def fruits_quantity
     # when > 5 years, must produce 100 fruits
     # when > 10 years, must produce 200 fruits
-    # when >= 15 years, won't produce fruits
-    # the fruits that have not been picked (at the end of a year) will fall
-    # You should be able to find out how many fruits are left hanging on the tree.
     if @age > 5 && @age < 10
       @fruits = 100
     elsif @age >= 10 && @age < 15
       @fruits = 200
     elsif @age == 15
+      # when >= 15 years, won't produce fruits
       @fruits = 0
     else
+      # the fruits that have not been picked (at the end of a year) will fall
       @fruits
     end
+    # You should be able to find out how many fruits are left hanging on the tree.
   end
 
   def pick_a_fruit!
