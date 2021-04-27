@@ -1,4 +1,4 @@
-// Function to simulate a trip among friends and calculate the exact amount of debt for each person, given the amount they already paid
+// TODO: Write a function to simulate a trip among friends and calculate the exact amount of debt for each person, given the amount they already paid
 const splitTheBill = (group) => {
   // Check if there is an object to calculate
   if (Object.keys(group).length > 0) {
