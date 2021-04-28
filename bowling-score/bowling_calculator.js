@@ -1,4 +1,4 @@
-// Write function to calculate the score of a bowling game accoring to the rules.
+// TODO: Write a function to calculate the score of a bowling game accoring to the rules.
 // The input is a list of pins knocked down per roll for one player.
 // The function should return the player score.
 const bowlingScore = (rolls) => {
