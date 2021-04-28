@@ -1,4 +1,4 @@
-// Simulate a battle between Hobbits, Elves, Dwarves and Eagles
+// TODO: Write a function to simulate a battle between Hobbits, Elves, Dwarves and Eagles
 
 // This function checks if the soldier is good or evil
 const isGood = (soldierType) => {
